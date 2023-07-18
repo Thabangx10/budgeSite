@@ -7,8 +7,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* .container-fluid {
+/* /* .container-fluid {
 background-color:rgb(176, 176, 176);
 } */
-
-
+.investments{
+background-image: url('https://i.postimg.cc/q7W7Wy2j/adobestock-399468897-scaled.jpg');
+height: 80vh;
+}
