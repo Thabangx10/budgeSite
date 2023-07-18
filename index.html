@@ -4,18 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOOTSRAP LINK -->
+    <!-- Add other meta tags, title, and stylesheets as needed -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
 
-    <title>Document</title>
+    <title>Language Selection</title>
 </head>
 
 <body>
-    <h1>
-        PEAK!
-    </h1>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-list">
+                <li><a href="./html/budget.html">BUDGET</a></li>
+                <li><a href="./html/whoareWe.html">ABOUT US</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Language Selection -->
+    <div id="languageContainer" class="language-container">
+        <h1 id="page-title">PEAK!</h1>
+        <div class="language-buttons">
+            <button class="lang-btn" onclick="changeLanguage('en')">English</button>
+            <button class="lang-btn" onclick="changeLanguage('xh')">Xhosa</button>
+            <button class="lang-btn" onclick="changeLanguage('af')">Afrikaans</button>
+        </div>
+    </div>
+
+    <!-- Language Transcripts -->
+    <div id="transcriptContainer" class="transcript-container">
+        <!-- English Transcript -->
+        <div class="lang-en transcript" style="display: none;">
+            <h3>English Transcript</h3>
+            <p>This is the English transcript of the video.</p>
+        </div>
+
+        <!-- Xhosa Transcript -->
+        <div class="lang-xh transcript" style="display: none;">
+            <h3>Xhosa Transcript</h3>
+            <p>Lomfuduzo unokufunda ku-Xhosa.</p>
+        </div>
+
+        <!-- Afrikaans Transcript -->
+        <div class="lang-af transcript" style="display: none;">
+            <h3>Afrikaans Transcript</h3>
+            <p>Hierdie is die Afrikaanse transkripsie van die video.</p>
+        </div>
+    </div>
 
     <!-- External JavaScript -->
     <script src="./script/index.js"></script>

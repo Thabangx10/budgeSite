@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Budget</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-list">
+                <li><a href="../html/budget.html">BUDGET</a></li>
+                <li><a href="../html/whoareWe.html">ABOUT US</a></li>
+                <li><a href="/">HOME</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HEADER -->
+    <h1>
+        Expense Evaluation
+    </h1>
+
+    <div class="container">
+        <div class="budget">
+            <div class="budget-value" id="budgetValue">R0</div>
+            <div class="budget-label">Budget</div>
+        </div>
+
+        <div class="expenses">
+            <h2>Expenses</h2>
+            <div class="expense-list" id="expenseList">
+                <!-- Expense items will be dynamically added here -->
+            </div>
+            <form id="expenseForm">
+                <input type="text" placeholder="Expense Name" id="expenseName" required>
+                <input type="number" placeholder="Amount" id="expenseAmount" required>
+                <button type="submit">Add Expense</button>
+            </form>
+        </div>
+
+        <!-- Fixed Income Section -->
+        <div class="fixed-income">
+            <h2>Fixed Income</h2>
+            <div class="income-list" id="incomeList">
+                <!-- Income items will be dynamically added here -->
+            </div>
+            <form id="incomeForm">
+                <input type="text" placeholder="Income Source" id="incomeSource" required>
+                <input type="number" placeholder="Amount" id="incomeAmount" required>
+                <button type="submit">Add Income</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Visualization Section -->
+    <div class="visualization">
+        <h2>Visualization</h2>
+        <div class="expense-visualization">
+            <h3>Expenses:</h3>
+            <ul id="expenseVisualizationList">
+                <!-- Expense items will be dynamically added here -->
+            </ul>
+        </div>
+        <div class="income-visualization">
+            <h3>Fixed Income:</h3>
+            <ul id="incomeVisualizationList">
+                <!-- Income items will be dynamically added here -->
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <script src="../script/index.js"></script>
+</body>
+
+</html>
