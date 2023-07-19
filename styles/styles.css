@@ -221,3 +221,70 @@ canvas {
         grid-template-columns: 1fr;
     }
 }
+
+/* PROFILE */
+
+/* Custom CSS for the profile cards */
+.profile-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.profile-card {
+    width: 250px;
+    border: 1px solid #eaeaea;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-picture {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 180px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.profile-details {
+    padding: 20px;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.profile-position {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.profile-performance {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 576px) {
+    .profile-picture {
+        height: 140px;
+    }
+    .profile-details {
+        padding: 15px;
+    }
+    .profile-name {
+        font-size: 1.3rem;
+    }
+    .profile-position {
+        font-size: 1.1rem;
+    }
+    .profile-performance {
+        font-size: 0.9rem;
+    }
+}

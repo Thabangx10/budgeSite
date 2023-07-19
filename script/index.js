@@ -289,3 +289,58 @@ window.addEventListener("load", () => {
 // Event listeners for form submissions
 expenseForm.addEventListener("submit", addExpense);
 incomeForm.addEventListener("submit", addIncome);
+
+// JavaScript code to display employee profiles
+
+// Employee Functionality
+const employees = [
+  {
+    name: "John Doe",
+    position: "Software Engineer",
+    performance: 85,
+  },
+  {
+    name: "Jane Smith",
+    position: "UX Designer",
+    performance: 92,
+  },
+  {
+    name: "Mike Johnson",
+    position: "Project Manager",
+    performance: 78,
+  },
+  {
+    name: "Emily Williams",
+    position: "Data Analyst",
+    performance: 89,
+  },
+  {
+    name: "Tom Anderson",
+    position: "Marketing Specialist",
+    performance: 70,
+  },
+];
+
+function displayEmployeeProfiles() {
+  const employeeProfiles = document.getElementById("employeeProfiles");
+
+  employees.forEach((employee) => {
+    const profileCard = document.createElement("div");
+    profileCard.classList.add("col-md-4", "mb-4");
+
+    profileCard.innerHTML = `
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">${employee.name}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">${employee.position}</h6>
+          <p class="card-text">Performance: ${employee.performance}</p>
+        </div>
+      </div>
+    `;
+
+    employeeProfiles.appendChild(profileCard);
+  });
+}
+
+// Call the function to display employee profiles when the page is loaded
+window.addEventListener("load", displayEmployeeProfiles);
