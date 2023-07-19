@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
     <link rel="stylesheet" href="../styles/styles.css">
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <title>Budget</title>
 </head>
 
@@ -60,30 +62,23 @@
     <div class="visualization">
         <h2>Visualization</h2>
 
-        <!-- <div class="expense-visualization">
+        <div class="expense-visualization">
             <h3>Expenses:</h3>
             <ul id="expenseVisualizationList">
-                 Expense items will be dynamically added here 
+                <!-- Expense items will be dynamically added here -->
             </ul>
         </div>
-        <div class="income-visualization" >
+        <div class="income-visualization">
             <h3>Fixed Income:</h3>
             <ul id="incomeVisualizationList">
-                 Income items will be dynamically added here
+                <!-- Income items will be dynamically added here -->
             </ul>
-        </div> -->
-
-        <!-- DASHBOARDS -->
+        </div>
         <div class="chart-container">
             <h3 style="text-align:center">Combined Income and Expenses</h3>
-            <canvas id="combinedChart" style="width:100%;max-width:700px;"></canvas>
+            <canvas id="pie-chart"></canvas>
+          </div>
         </div>
-    </div>
-    </div>
-
-    <!-- JS LIBRARY -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
     <!-- EXTERNAL JS FILE -->
     <script src="../script/index.js"></script>
 </body>
