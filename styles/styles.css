@@ -1,3 +1,14 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -148,7 +159,7 @@ body {
 }
 
 /* Navigation Bar */
-.navbar {
+/* .navbar {
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -169,7 +180,7 @@ body {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
-}
+} */
 
 /* Language Selection */
 .language-container {
@@ -286,4 +297,44 @@ canvas {
     .profile-performance {
         font-size: 0.9rem;
     }
+}
+
+/* taff stuff */
+style --css
+/* root */
+
+/* .container-fluid {
+background-color:rgb(176, 176, 176);
+} */
+.highlights{
+    border-bottom: 2px solid black;
+}
+.card-title h5{
+   color: black;
+}
+.img{
+    background-image: url('https://i.postimg.cc/2jg8bVYN/yellow.jpg');
+    height: 100vh;
+}
+.brandname{
+    margin-top: 200px;
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* .info{
+    color: white;
+} */
+.personimg{
+    margin-top: 60px;
+}
+h4{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.overlay{
+    background-image: url('');
+}
+.mandy{
+    margin-top: 60px;
+}
+span{
+    color: white;
 }
