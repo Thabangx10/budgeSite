@@ -2,111 +2,362 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- Chart JS -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <title>Budget</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Boostrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+  crossorigin="anonymous">
+  <!-- Chart JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <title>Budget</title>
 </head>
+
+<style>
+  /* Global Styles */
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    background-color: #060606;
+    color: #fff;
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .navbar-toggler {
+    color: #fff;
+    border: none;
+  }
+
+  /* Page Heading */
+  .img h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Budget Section */
+  .budget {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .budget-value {
+    font-size: 36px;
+    font-weight: bold;
+    color: #4CAF50;
+  }
+
+  .budget-label {
+    font-size: 18px;
+    color: #888;
+  }
+
+  /* Expenses Section */
+  .expenses {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF;
+  }
+
+  .expenses h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .expense-list {
+    margin-top: 10px;
+  }
+
+  .expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .expense-item button {
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  form#expenseForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  input#expenseName,
+  input#expenseAmount,
+  button[type="submit"] {
+    padding: 5px;
+  }
+
+  /* Fixed Income Section */
+  .fixed-income {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+  }
+
+  .fixed-income h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .income-list {
+    margin-bottom: 20px;
+  }
+
+  .income-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #DDD;
+  }
+
+  .income-item button {
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  form#incomeForm {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  input#incomeSource,
+  input#incomeAmount,
+  button[type="submit"] {
+    padding: 5px;
+  }
+
+  /* Visualization Section */
+  .visualization {
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px solid #DDD;
+    border-radius: 5px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .visualization h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #45474a;
+    margin-bottom: 20px;
+  }
+
+  .visualization h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .expense-visualization,
+  .income-visualization {
+    margin-bottom: 20px;
+  }
+
+  .expense-visualization ul,
+  .income-visualization ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .expense-visualization ul li,
+  .income-visualization ul li {
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .expense-visualization ul li::before,
+  .income-visualization ul li::before {
+    content: "1";
+    color: #007BFF;
+    margin-right: 10px;
+  }
+
+  .chart-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  /* Chart Container */
+  .chart-container {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    img.navbar-brand {
+      max-height: 30px;
+    }
+
+    .img h1 {
+      font-size: 24px;
+    }
+
+    .budget-value {
+      font-size: 24px;
+    }
+
+    .budget-label {
+      font-size: 16px;
+    }
+
+    .expenses h2 {
+      font-size: 20px;
+    }
+
+    .fixed-income h2 {
+      font-size: 18px;
+    }
+
+    .visualization h2 {
+      font-size: 20px;
+    }
+
+    .visualization h3 {
+      font-size: 18px;
+    }
+  }
+</style>
+
 <body>
-<nav class="navbar bg-body-tertiary ">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="https://i.postimg.cc/FKrHJ46h/2023.png" alt="brand" width="100px"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://i.postimg.cc/DfDQmWR3/budget-LOGO.jpg" alt="brand" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./html/whoareWe.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./html/budget.html">Budget</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./html/investmets.html">Investments</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./html/contact.html">Contact</a>
-              </li>
-        </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/whoareWe.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
+  
 
 
- <div class="img">
+
+  <div class="img">
     <h1>
-        Expense Evaluation
+      Expense Evaluation
     </h1>
 
     <div class="container">
-        <div class="budget">
-            <div class="budget-value" id="budgetValue">R0</div>
-            <div class="budget-label">Budget</div>
-        </div>
+      <div class="budget">
+        <div class="budget-value" id="budgetValue">R0</div>
+        <div class="budget-label">Budget</div>
+      </div>
 
-        <div class="expenses">
-            <h2>Expenses</h2>
-            <div class="expense-list" id="expenseList">
-                <!-- Expense items will be dynamically added here -->
-            </div>
-            <form id="expenseForm">
-                <input type="text" placeholder="Expense Name" id="expenseName" required>
-                <input type="number" placeholder="Amount" id="expenseAmount" required>
-                <button type="submit">Add Expense</button>
-            </form>
+      <div class="expenses">
+        <h2>Expenses</h2>
+        <div class="expense-list" id="expenseList">
+          <!-- Expense items will be dynamically added here -->
         </div>
+        <form id="expenseForm">
+          <input type="text" placeholder="Expense Name" id="expenseName" required>
+          <input type="number" placeholder="Amount" id="expenseAmount" required>
+          <button type="submit">Add Expense</button>
+        </form>
+      </div>
 
-        <!-- Fixed Income Section -->
-        <div class="fixed-income">
-            <h2>Fixed Income</h2>
-            <div class="income-list" id="incomeList">
-                <!-- Income items will be dynamically added here -->
-            </div>
-            <form id="incomeForm">
-                <input type="text" placeholder="Income Source" id="incomeSource" required>
-                <input type="number" placeholder="Amount" id="incomeAmount" required>
-                <button type="submit">Add Income</button>
-            </form>
+      <!-- Fixed Income Section -->
+      <div class="fixed-income">
+        <h2>Fixed Income</h2>
+        <div class="income-list" id="incomeList">
+          <!-- Income items will be dynamically added here -->
         </div>
+        <form id="incomeForm">
+          <input type="text" placeholder="Income Source" id="incomeSource" required>
+          <input type="number" placeholder="Amount" id="incomeAmount" required>
+          <button type="submit">Add Income</button>
+        </form>
+      </div>
     </div>
-     <!-- Visualization Section -->
-     <div class="visualization">
-        <h2>Visualization</h2>
+    <!-- Visualization Section -->
+    <div class="visualization">
+      <h2>Visualization</h2>
 
-        <div class="expense-visualization">
-            <h3>Expenses:</h3>
-            <ul id="expenseVisualizationList">
-                <!-- Expense items will be dynamically added here -->
-            </ul>
-        </div>
-        <div class="income-visualization">
-            <h3>Fixed Income:</h3>
-            <ul id="incomeVisualizationList">
-                <!-- Income items will be dynamically added here -->
-            </ul>
-        </div>
-        <div class="chart-container">
-            <h3 style="text-align:center">Combined Income and Expenses</h3>
-            <canvas id="pie-chart"></canvas>
-          </div>
-        </div>
- </div>
+      <div class="expense-visualization">
+        <h3>Expenses:</h3>
+        <ul id="expenseVisualizationList">
+          <!-- Expense items will be dynamically added here -->
+        </ul>
+      </div>
+      <div class="income-visualization">
+        <h3>Fixed Income:</h3>
+        <ul id="incomeVisualizationList">
+          <!-- Income items will be dynamically added here -->
+        </ul>
+      </div>
+      <div class="chart-container">
+        <h3 style="text-align:center">Combined Income and Expenses</h3>
+        <canvas id="pie-chart"></canvas>
+      </div>
+    </div>
+  </div>
 
-    <!-- EXTERNAL JS FILE -->
-    <script src="../script/index.js"></script>
+  <!-- JS BOOTSRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- EXTERNAL JS FILE -->
+  <script src="../script/index.js"></script>
 </body>
 
 </html>

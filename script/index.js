@@ -290,57 +290,77 @@ window.addEventListener("load", () => {
 expenseForm.addEventListener("submit", addExpense);
 incomeForm.addEventListener("submit", addIncome);
 
-// JavaScript code to display employee profiles
+// JavaScript code to display our agenda
+
+  function showWho() {
+    // Replace the content below with your "Who We Are" content
+    const who = "<p>We are a team of passionate individuals...</p>";
+    document.getElementById("showContent").innerHTML = content;
+  }
+
+  function showWhat() {
+    // Replace the content below with your "What We Do" content
+    const content = "<p>We provide innovative solutions...</p>";
+    document.getElementById("showContent").innerHTML = content;
+  }
+
+  function showWhy() {
+    // Replace the content below with your "Why Choose Us" content
+    const content = "<p>We prioritize customer satisfaction...</p>";
+    document.getElementById("showContent").innerHTML = content;
+  }
+
+
 
 // Employee Functionality
-const employees = [
-  {
-    name: "John Doe",
-    position: "Software Engineer",
-    performance: 85,
-  },
-  {
-    name: "Jane Smith",
-    position: "UX Designer",
-    performance: 92,
-  },
-  {
-    name: "Mike Johnson",
-    position: "Project Manager",
-    performance: 78,
-  },
-  {
-    name: "Emily Williams",
-    position: "Data Analyst",
-    performance: 89,
-  },
-  {
-    name: "Tom Anderson",
-    position: "Marketing Specialist",
-    performance: 70,
-  },
-];
+// const employees = [
+//   {
+//     name: "John Doe",
+//     position: "Software Engineer",
+//     performance: 85,
+//   },
+//   {
+//     name: "Jane Smith",
+//     position: "UX Designer",
+//     performance: 92,
+//   },
+//   {
+//     name: "Mike Johnson",
+//     position: "Project Manager",
+//     performance: 78,
+//   },
+//   {
+//     name: "Emily Williams",
+//     position: "Data Analyst",
+//     performance: 89,
+//   },
+//   {
+//     name: "Tom Anderson",
+//     position: "Marketing Specialist",
+//     performance: 70,
+//   },
+// ];
 
-function displayEmployeeProfiles() {
-  const employeeProfiles = document.getElementById("employeeProfiles");
+// function displayEmployeeProfiles() {
+//   const employeeProfiles = document.getElementById("employeeProfiles");
 
-  employees.forEach((employee) => {
-    const profileCard = document.createElement("div");
-    profileCard.classList.add("col-md-4", "mb-4");
+//   employees.forEach((employee) => {
+//     const profileCard = document.createElement("div");
+//     profileCard.classList.add("col-md-4", "mb-4");
 
-    profileCard.innerHTML = `
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">${employee.name}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${employee.position}</h6>
-          <p class="card-text">Performance: ${employee.performance}</p>
-        </div>
-      </div>
-    `;
+//     profileCard.innerHTML = `
+//       <div class="card">
+//         <div class="card-body">
+//           <h5 class="card-title">${employee.name}</h5>
+//           <h6 class="card-subtitle mb-2 text-muted">${employee.position}</h6>
+//           <p class="card-text">Performance: ${employee.performance}</p>
+//         </div>
+//       </div>
+//     `;
 
-    employeeProfiles.appendChild(profileCard);
-  });
-}
+//     employeeProfiles.appendChild(profileCard);
+//   });
+// }
 
-// Call the function to display employee profiles when the page is loaded
-window.addEventListener("load", displayEmployeeProfiles);
+// // Call the function to display employee profiles when the page is loaded
+// window.addEventListener("load", displayEmployeeProfiles);
