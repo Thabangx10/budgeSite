@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<<<<<<< HEAD
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,68 +38,174 @@
                     <a class="nav-link active" aria-current="page" href="./html/contact.html">Contact</a>
                   </li>
             </div>
+=======
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <title>Plexus Technology</title>
+</head>
+
+<style>
+  /* Global Styles */
+  body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    background-color: #007BFF;
+    color: #141313;
+    padding: 10px;
+  }
+
+  .navbar-brand img {
+    max-height: 40px;
+  }
+
+  .navbar-toggler {
+    color: #fff;
+    border: none;
+  }
+  .section-container {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-container h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+  }
+
+  .section-container p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .section-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .section-buttons .btn {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+
+  /* Responsive Styles */
+
+  @media (max-width: 768px) {
+    /* Add your existing responsive styles here */
+
+    .section-buttons {
+      flex-direction: column;
+    }
+
+    .section-buttons .btn {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+</style>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+        <img src="https://i.postimg.cc/DfDQmWR3/budget-LOGO.jpg" alt="brand" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/whoareWe.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/budget.html">Budget</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../html/contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Button Sections -->
+  <div class="container">
+    <div class="row mt-4">
+      <div class="col text-center">
+        <div class="section-container">
+          <h2>Who We Are</h2>
+          <div id="showWhoContent">
+            <p>We are a team of passionate individuals...</p>
+          </div>
+          <div class="section-buttons">
+            <button type="button" class="btn btn-primary" onclick="showWho()">Show Who</button>
+>>>>>>> 1f10f553ea9175c31646a15261fba5c8206ef9ae
           </div>
         </div>
-      </nav>
-      <main>
-        <div class="img">
-          <div class="container text-center">
-            <div class="row align-items-center">
-              <div class="col">
-                <div class="brandname">
-                  <h1>Plexus Technology</h1>
-                  <!-- ********************************** -->
-                <div class="info">
-                  <h4>Let us <span>optimize your budget</span> for you<br>
-                    We are all about encouraging the budget friendly but also savvy financial decision </h4>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="personimg">
-                  <img src="https://i.postimg.cc/x1W768DS/a5d4c23-ac27-5834-e6e-4be7da01f2c-company-budgets-false-hope-removebg-preview.png" alt="">
-                  <h4>Why be worried , when you can be assertive with us?</h4>
-                </div>
-              </div>
-            </div>
+      </div>
+      <div class="col text-center">
+        <div class="section-container">
+          <h2>What We Do</h2>
+          <div id="showWhatContent">
+            <p>We provide innovative solutions...</p>
           </div>
-          <!-- *********************************** -->
-          <div class="resources">
-            <div class="container text-center">
-              <div class="row align-items-center">
-                <div class="col">
-                  One of three columns
-                </div>
-                <div class="col">
-                  One of three columns
-                </div>
-                <!-- <div class="col">
-                  One of three columns
-                </div> -->
-              </div>
-            </div>
+          <div class="section-buttons">
+            <button type="button" class="btn btn-primary" onclick="showWhat()">Show What</button>
           </div>
         </div>
-        <!-- <div class="resources">
-          <div class="container text-center">
-            <div class="row align-items-center">
-              <div class="col">
-                One of three columns
-              </div>
-              <div class="col">
-                One of three columns
-              </div>
-              <div class="col">
-                One of three columns
-              </div>
-            </div>
+      </div>
+      <div class="col text-center">
+        <div class="section-container">
+          <h2>Why Choose Us</h2>
+          <div id="showWhyContent">
+            <p>We prioritize customer satisfaction...</p>
           </div>
-        </div> -->
-      </main>
-          <!-- External JavaScript -->
-    <script src="./script/index.js"></script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-  </body>
+          <div class="section-buttons">
+            <button type="button" class="btn btn-primary" onclick="showWhy()">Show Why</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- External JavaScript -->
+  <script src="./script/index.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
 
 </html>
