@@ -1,44 +1,5 @@
 <!doctype html>
 <html lang="en">
-<<<<<<< HEAD
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar bg-body-tertiary ">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/"><img src="https://i.postimg.cc/FKrHJ46h/2023.png" alt="brand" width="100px"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./html/whoareWe.html">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./html/budget.html">Budget</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./html/investmets.html">Investments</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="./html/contact.html">Contact</a>
-                  </li>
-            </div>
-=======
 
 <head>
   <meta charset="utf-8">
@@ -77,6 +38,7 @@
     color: #fff;
     border: none;
   }
+
   .section-container {
     padding: 40px 0;
     background-color: #f9f9f9;
@@ -129,8 +91,9 @@
 
 <body>
 
+
   <nav class="navbar navbar-expand-lg navbar-dark ">
-    <div class="container">
+    <div class="container-fluid">
       <a class="navbar-brand" href="/">
         <img src="https://i.postimg.cc/DfDQmWR3/budget-LOGO.jpg" alt="brand" width="40" height="40">
       </a>
@@ -161,36 +124,36 @@
   <div class="container">
     <div class="row mt-4">
       <div class="col text-center">
-        <div class="section-container">
+        <div class="section-container" class="section-content">
           <h2>Who We Are</h2>
           <div id="showWhoContent">
             <p>We are a team of passionate individuals...</p>
           </div>
           <div class="section-buttons">
-            <button type="button" class="btn btn-primary" onclick="showWho()">Show Who</button>
->>>>>>> 1f10f553ea9175c31646a15261fba5c8206ef9ae
+            <button type="button" class="btn btn-primary" onclick="showContent('showWhoContent')">Show Who</button>
+
           </div>
         </div>
       </div>
       <div class="col text-center">
         <div class="section-container">
           <h2>What We Do</h2>
-          <div id="showWhatContent">
+          <div id="showWhatContent" class="section-content">
             <p>We provide innovative solutions...</p>
           </div>
           <div class="section-buttons">
-            <button type="button" class="btn btn-primary" onclick="showWhat()">Show What</button>
+            <button type="button" class="btn btn-primary" onclick="showContent('showWhatContent')">Show What</button>
           </div>
         </div>
       </div>
       <div class="col text-center">
         <div class="section-container">
           <h2>Why Choose Us</h2>
-          <div id="showWhyContent">
+          <div id="showWhyContent" class="section-content">
             <p>We prioritize customer satisfaction...</p>
           </div>
           <div class="section-buttons">
-            <button type="button" class="btn btn-primary" onclick="showWhy()">Show Why</button>
+            <button type="button" class="btn btn-primary" onclick="showContent('showWhyContent')">Show Why</button>
           </div>
         </div>
       </div>
